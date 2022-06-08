@@ -2,12 +2,8 @@
 set -e
 
 ORGANIZATION=jpgarcia #underscopeio
-BITRISE_STEP_VERSION=$(cat < package.json | jq -r '.version')
-
-echo "^^^^^^^^^^^^^^^^"
-git --no-pager log --decorate=short --pretty=oneline -n1
-cat ./package.json
-echo "^^^^^^^^^^^^^^^^"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BITRISE_STEP_VERSION=$(cat < "$SCRIPT_DIR/package.json" | jq -r '.version')
 
 # shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
@@ -18,8 +14,6 @@ fi
 if [[ -n ${nitro_bin_file_path} ]] ; then
     BIN_FILE_PATH="$nitro_bin_file_path"
 else
-    SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
     MACOS_BIN_FILE="nitro-macos"
     LINUX_BIN_FILE="nitro-linux"
 
