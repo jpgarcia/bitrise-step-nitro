@@ -4,6 +4,11 @@ set -e
 ORGANIZATION=jpgarcia #underscopeio
 BITRISE_STEP_VERSION=$(cat < package.json | jq -r '.version')
 
+echo "^^^^^^^^^^^^^^^^"
+git --no-pager log --decorate=short --pretty=oneline -n1
+cat ./package.json
+echo "^^^^^^^^^^^^^^^^"
+
 # shellcheck disable=SC2154
 if [[ ${debug} == "yes" ]] || [[ ${debug} == "true" ]] ; then
     set -x
