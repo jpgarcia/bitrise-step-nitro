@@ -37,18 +37,18 @@
         }
       ],
       [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "./build-nitro-cli.sh"
+        }
+      ],
+      [
         "@semantic-release/git",
         {
           "assets": [
             "package.json"
           ],
           "message": "chore(release): Bump version to ${nextRelease.version}"
-        }
-      ],
-      [
-        "@semantic-release/exec",
-        {
-          "prepareCmd": "./build-nitro-cli.sh"
         }
       ],
       [
