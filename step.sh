@@ -73,6 +73,10 @@ fi
 if [[ -n ${env_var_lookup_keys} ]] ; then
     args+=("--env-var-lookup-keys=""${env_var_lookup_keys}""")
 fi
+# shellcheck disable=SC2154
+if [[ ${experimental_metro_cache_enabled} == "yes" ]] || [[ ${experimental_metro_cache_enabled} == "true" ]]; then
+    args+=("--experimental-metro-cache-enabled")
+fi
 
 # IOS args
 if [[ "${platform}" == "ios" ]] ; then
