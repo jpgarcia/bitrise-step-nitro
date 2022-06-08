@@ -2,7 +2,8 @@
 set -ex
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-TMP_DIR=$(mktemp -d -t 'nitro')
+CREATE_TMP_DIR_CMD=$([[ "$(uname)" == "Darwin" ]] && echo "mktemp -d -t nitro" || echo "mktemp -d -t")
+TMP_DIR=$($CREATE_TMP_DIR_CMD)
 NITRO_SOURCE_DIR="$SCRIPT_DIR/node_modules/underscope-ci"
 NITRO_SOURCE_TMP_DIR="$TMP_DIR/underscope-ci"
 
