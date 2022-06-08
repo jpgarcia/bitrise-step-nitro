@@ -21,3 +21,6 @@ yarn dist
 cd "$SCRIPT_DIR"
 rm -rf "$SCRIPT_DIR/dist"
 cp -R "$NITRO_BUILDER_TMP_DIR/dist" "$SCRIPT_DIR"
+
+# Remove temp dir
+rm -rf "$TMP_DIR"

@@ -3237,9 +3237,9 @@ uglify-js@^3.1.4:
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.16.0.tgz#b778ba0831ca102c1d8ecbdec2d2bdfcc7353190"
   integrity sha512-FEikl6bR30n0T3amyBh3LoiBdqHRy/f4H80+My34HOesOKyHfOsxAPAxOoqC0JUnC1amnO0IwkYC3sko51caSw==
 
-"underscope-ci@ssh://git@github.com:underscopeio/underscope-ci.git#development":
+"underscope-ci@ssh://git@github.com:underscopeio/underscope-ci.git#feat/metro-cache":
   version "0.1.0"
-  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#78379d4b0314cff024cf0308c5300d3d449433d6"
+  resolved "ssh://git@github.com:underscopeio/underscope-ci.git#98d0b678904f0ec47d0b1b06b554026203f780bd"
 
 unique-filename@^1.1.1:
   version "1.1.1"
